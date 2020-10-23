@@ -5,6 +5,10 @@ const api = {
 const searchBox = document.querySelector('.search')
 searchBox.addEventListener('keypress', setQuerry)
 
+const now = new Date()
+const date = document.querySelector('.location .date')
+date.innerText = dateBuilder(now)
+
 function setQuerry(e) {
     if(e.keyCode === 13){
     getResponse(searchBox.value)
